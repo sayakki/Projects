@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Comic Sans MS;}{\f1\fnil Consolas;}{\f2\fnil\fcharset0 Calibri;}{\f3\fnil\fcharset0 Consolas;}}
+{\colortbl ;\red255\green0\blue0;\red0\green176\blue80;\red100\green100\blue100;\red0\green0\blue0;\red42\green0\blue255;\red127\green0\blue85;\red0\green0\blue192;\red212\green212\blue212;\red42\green161\blue152;\red0\green128\blue128;\red63\green127\blue127;\red127\green0\blue127;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\cf1\ul\b\f0\fs28\lang9 __________________Enerx4.3______________________\par
+\cf0\fs24 Creating the Spring Starter Project named \cf1 enerx\par
+========================================================\par
+\cf0\fs28 Creating the Database enerx\fs24\par
+\cf2 Local instances\par
+Creating a new Schema in the connected Server\par
+\cf1 enerxdb\par
+\cf0 ========================================================\par
+\cf1\fs28 Creating a class\cf0\fs24\par
+\cf1\fs28 Lead.java\fs24\par
+\cf3\ulnone\b0\f1 @Entity\cf0\par
+\cf3 @Table\cf4 (name=\cf5 "leads"\cf4 )\cf0\par
+\cf6\b public\cf4\b0  \cf6\b class\cf4\b0  Lead \{\cf0\par
+\cf4\tab\cf3 @Id\cf0\par
+\cf4\tab\cf3 @GeneratedValue\cf4 ( strategy = GenerationType.\cf7\b\i IDENTITY\cf4\b0\i0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  \cf6\b long\cf4\b0  \cf7 id\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "first_name"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 firstName\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "last_name"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 lastName\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "email"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 ,unique=\cf6\b true\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 email\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "mobile"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 ,unique=\cf6\b true\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  \cf6\b long\cf4\b0  \cf7 mobile\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf4\tab\cf3 @Column\cf4 (name=\cf5 "lead_source"\cf4 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 leadSource\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf4\tab\cf3 @Column\cf4 (name=\cf5 "gender"\cf4 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 gender\cf4 ;\cf0\par
+\cf4\}\par
+\cf2\ul\b\f0\lang16393 Now,Create getters and setters\cf0\ulnone\b0\f1\lang9\par
+\f2\fs22 ---------------------------------------------------------------------------------------------------------------------------\par
+\cf1\ul\b\f0\fs28 Contact.java\par
+\cf3\ulnone\b0\f1\fs24 @Entity\cf0\par
+\cf3 @Table\cf4 (name=\cf5 "\f3\lang16393 contacts\f1\lang9 "\cf4 )\cf0\par
+\cf6\b public\cf4\b0  \cf6\b class\cf4\b0  Lead \{\cf0\par
+\cf4\tab\cf3 @Id\cf0\par
+\cf4\tab\cf3 @GeneratedValue\cf4 ( strategy = GenerationType.\cf7\b\i IDENTITY\cf4\b0\i0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  \cf6\b long\cf4\b0  \cf7 id\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "first_name"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 firstName\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "last_name"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 lastName\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "email"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 ,unique=\cf6\b true\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 email\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf3 @Column\cf4 (name=\cf5 "mobile"\cf4 ,length=45,nullable=\cf6\b false\cf4\b0 ,unique=\cf6\b true\cf4\b0 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  \cf6\b long\cf4\b0  \cf7 mobile\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf4\tab\cf3 @Column\cf4 (name=\cf5 "lead_source"\cf4 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 leadSource\cf4 ;\cf0\par
+\cf4\tab\cf0\par
+\cf4\tab\cf3 @Column\cf4 (name=\cf5 "gender"\cf4 )\cf0\par
+\cf4\tab\cf6\b private\cf4\b0  String \cf7 gender\cf4 ;\cf0\par
+\cf4\}\par
+\par
+\cf2\ul\b\f0\lang16393 Now,Create getters and setters\cf0\ulnone\b0\f1\lang9\par
+\ul\b\f0\fs28 _______________________________________________\par
+\cf1 Creating the Repository Layer\par
+\fs24 LeadRepository.java-\cf2\ulnone an Interface\par
+adding the jpaRepository\cf1\ul\fs28\par
+\cf4\ulnone\b0\f1\fs24 org.springframework.data.jpa.repository.JpaRepository<T, I\f3\lang16393 >\par
+\cf6\b\f1\par
+package\cf4\b0  com.enerx.repositories;\cf0\par
+\cf6\b import\cf4\b0  org.springframework.data.jpa.repository.JpaRepository;\cf0\par
+\cf6\b import\cf4\b0  com.enerx.entities.Lead;\cf0\par
+\cf6\b public\cf4\b0  \cf6\b interface\cf4\b0  LeadRepository \cf6\b extends\cf4\b0  JpaRepository\par
+<Lead, Long> \{\cf0\par
+\cf4\}\par
+\b\f3 --------------------------------------------------------------\b0\f1\par
+\cf1\ul\b\f0\lang9 ContactRepository.java-\cf2\ulnone an Interface\par
+adding the jpaRepository\cf1\ul\fs28\par
+\cf6\ulnone\f1\fs24 package\cf4\b0  com.enerx.repositories;\cf0\par
+\cf6\b import\cf4\b0  org.springframework.data.jpa.repository.JpaRepository;\cf0\par
+\cf6\b import\cf4\b0  com.enerx.entities.Contacts.Lead;\cf0\par
+\cf6\b public\cf4\b0  \cf6\b interface\cf4\b0  ContactRepository \cf6\b extends\cf4\b0  JpaRepository\par
+<Lead, \highlight8 Long\highlight0 > \{\cf0\par
+\cf4\}\par
+\cf0\ul\b\f0\fs28 _______________________________________________\par
+\cf1 application properties\par
+\cf4\ulnone\b0\f1\fs24 spring.datasource.url=\cf9 jdbc:mysql://localhost:3306/enerxdb\cf0\par
+\cf4 spring.datasource.username=\cf9 root\cf0\par
+\cf4 spring.datasource.password=\cf9 test\cf0\par
+\par
+\cf4 spring.jpa.hibernate.ddl-auto=\cf9\f3\lang16393 create\par
+\cf1\ul\b\f0\fs28\lang9 pom.xml\par
+\cf10\ulnone\b0\f3\fs24\lang16393\tab\tab\f1\lang9 <\cf11 dependency\cf10 >\cf0\par
+\cf4\tab\tab     \cf10 <\cf11 groupId\cf10 >\cf4 org.apache.tomcat.embed\cf10 </\cf11 groupId\cf10 >\cf0\par
+\cf4\tab\tab     \cf10 <\cf11 artifactId\cf10 >\cf4 tomcat-embed-jasper\cf10 </\cf11 artifactId\cf10 >\cf0\par
+\cf4\tab\tab     \cf10 <\cf11 scope\cf10 >\cf4 provided\cf10 </\cf11 scope\cf10 >\cf0\par
+\cf4\tab\tab\cf10 </\cf11 dependency\cf10 >\par
+\cf0\ul\b\f0\fs28 _______________________________________________\par
+\cf1\ulnone\tab\tab\tab\tab\ul Table created\par
+\cf2\ulnone\fs24 check it after project runs on the spring boot server\cf1\ul\fs28\par
+\cf0 _______________________________________________\par
+\cf1 view_lead_page.jsp\cf0\par
+\cf10\ulnone\b0\f1\fs24 <\cf11\highlight8 h2\cf10\highlight0 >\cf4  Lead  ! Create\cf10 </\cf11\highlight8 h2\cf10\highlight0 >\cf0\par
+\cf10 <\cf11 form\cf0  \cf12 action\cf4 =\cf5\i "saveLead"\cf0\i0  \cf12 method\cf4 =\cf5\i "post"\cf10\i0 >\cf0\par
+\cf4\tab\cf10 <\cf11 pre\cf10 >\cf0\par
+\cf4\tab\tab First Name\cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "text"\cf0\i0  \cf12 name\cf4 =\cf5\i "firstName"\cf10\i0 />\cf0\par
+\cf4\tab\tab Last Name\cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "text"\cf0\i0  \cf12 name\cf4 =\cf5\i "lastName"\cf10\i0 />\cf0\par
+\cf4\tab\tab Email\cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "text"\cf0\i0  \cf12 name\cf4 =\cf5\i "email"\cf10\i0 />\cf0\par
+\cf4\tab\tab Mobile\cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "text"\cf0\i0  \cf12 name\cf4 =\cf5\i "mobile"\cf10\i0 />\cf0\par
+\cf4\tab\tab Lead Source: \par
+\f3\lang16393\tab\tab\cf10\f1\lang9 <\cf11 select\cf0  \cf12 name\cf4 =\cf5\i "LeadSource"\cf0\i0  \cf10 >\cf0\par
+\cf4\tab\tab\tab\cf10 <\cf11 option\cf0  \cf12 value\cf4 =\cf5\i "radio"\cf10\i0 >\cf4 Radio\cf10 </\cf11 option\cf10 >\cf0\par
+\cf4\tab\tab\f3\lang16393\tab\cf10\f1\lang9 <\cf11 option\cf0  \cf12 value\cf4 =\cf5\i "tv"\cf10\i0 >\cf4 TV\cf10 </\cf11 option\cf10 >\cf0\par
+\cf4\tab\tab\tab\cf10 <\cf11 option\cf0  \cf12 value\cf4 =\cf5\i "trade show"\cf10\i0 >\cf4 Trade Show\cf10 </\cf11 option\cf10 >\cf0\par
+\cf4\tab\tab\tab\cf10 <\cf11 option\cf0  \cf12 value\cf4 =\cf5\i "news paper"\cf10\i0 >\cf4 News Paper\cf10 </\cf11 option\cf10 >\cf0\par
+\cf4\tab\tab\cf10 </\cf11 select\cf10 >\cf0\par
+\cf4\tab\tab Gender:\cf0\par
+\cf4\tab\tab Male: \cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "radio"\cf0\i0  \cf12 name\cf4 =\cf5\i "gender"\cf0\i0  \cf12 value\cf4 =\cf5\i "male"\cf10\i0 >\cf0\par
+\cf4\tab\tab FeMale:\cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "radio"\cf0\i0  \cf12 name\cf4 =\cf5\i "gender"\cf0\i0  \cf12 value\cf4 =\cf5\i "female"\cf10\i0 >\cf4\tab\tab   \cf0\par
+\cf4         \cf10 <\cf11 input\cf0  \cf12 type\cf4 =\cf5\i "submit"\cf0\i0  \cf12 value\cf4 =\cf5\i "save"\cf10\i0 />\cf4\tab\cf0\par
+\cf4\tab\cf10 </\cf11 pre\cf10 >\cf0\par
+\cf10 </\cf11 form\cf10 >\par
+\cf0\ul\b\f0\fs28 _______________________________________________\par
+\cf1 Creating the Controller\par
+\fs24 LeadController\par
+\cf3\ulnone\b0\f1 @Controller\cf0\par
+\cf6\b public\cf4\b0  \cf6\b class\cf4\b0  LeadController \{\cf0\par
+\cf4\tab\cf3 @\highlight8 RequestMapping\cf4\highlight0 (\cf5 "/viewleadpage"\cf4 )\cf0\par
+\cf4\tab\cf6\b public\cf4\b0  String viewLeadPage() \{\cf0\par
+\cf4\tab\tab\cf6\b return\cf4\b0  \cf5 "view_lead_page"\cf4 ;\cf0\par
+\cf4\tab\}\cf0\par
+\cf4\}\cf0\par
+\ul\b\f0\fs28 _______________________________________________\par
+\ulnone\b0\f2\fs22\par
+}
+ 
